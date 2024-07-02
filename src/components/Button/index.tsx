@@ -1,4 +1,4 @@
-import { IconProps } from "phosphor-react";
+import { IconProps } from "@phosphor-icons/react";
 import { ButtonHTMLAttributes, ComponentType } from "react";
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {

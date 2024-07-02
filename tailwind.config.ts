@@ -17,6 +17,7 @@ const config: Config = {
           black: "#1A1C1E",
           white: "#F4F4F7",
           border: "#626262",
+          text: "#343537",
         },
         blue: {
           text: "#1B2632",
