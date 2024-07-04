@@ -1,27 +1,46 @@
 import { Divider } from "@/components/Divider";
 import { SectionContainer } from "@/components/SectionContainer";
 import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
+import {
   GearSix,
+  Headset,
+  Link,
   Lock,
+  LockKey,
   Medal,
+  PaintBrush,
   PencilSimple,
   Play,
+  Quotes,
   ShieldCheck,
   Star,
+  StarHalf,
   ThumbsUp,
+  TipJar,
+  Users,
 } from "@phosphor-icons/react/dist/ssr";
 import Image from "next/image";
 import cards from "../assets/cards.svg";
-import clienteDepoiment1 from "../assets/depoiment-client-01.svg";
-import clienteDepoiment2 from "../assets/depoiment-client-02.svg";
-import clienteDepoiment3 from "../assets/depoiment-client-03.svg";
+import coffer from "../assets/coffer.svg";
 import diagonalNotebook from "../assets/diagonal-notebook.svg";
+import dot from "../assets/dot.svg";
+import person1 from "../assets/person01.png";
+import person2 from "../assets/person02.png";
+import person3 from "../assets/person03.png";
 import reportanaLogo from "../assets/reportana.svg";
+import shield from "../assets/shield.svg";
 import shopifyLogo from "../assets/shopify.svg";
+import targetArrow from "../assets/target-arrow.svg";
 import transfeeraLogo from "../assets/transfeera.svg";
 import person from "../assets/welcome-photo.png";
 import zemoLogo from "../assets/zemo.svg";
 
+// TODO: Overview do que precisa ser componentizado
 export default function Home() {
   return (
     <>
@@ -136,122 +155,123 @@ export default function Home() {
 
       <Divider optionalClass="md:hidden" />
 
-      <section className="flex justify-center w-full h-auto pt-14 md:px-[1.375rem]">
-        <div className="flex flex-col w-full md:max-w-7xl h-full gap-14">
-          <h3 className="font-jakarta font-bold text-4xl">
-            Escale o gerenciamento de seus pagamentos
-          </h3>
+      <SectionContainer
+        additionalSectionClass="h-auto pt-14"
+        additionalContainerClass="gap-14"
+      >
+        <h3 className="font-jakarta font-bold text-4xl">
+          Escale o gerenciamento de seus pagamentos
+        </h3>
 
-          <div className="flex gap-20">
-            <Image
-              src={diagonalNotebook}
-              alt="Notebook na diagonal"
-              sizes="100vw"
-              className="w-80 lg:w-[40rem] h-auto"
-              priority
+        <div className="flex gap-20">
+          <Image
+            src={diagonalNotebook}
+            alt="Notebook na diagonal"
+            sizes="100vw"
+            className="w-80 lg:w-[40rem] h-auto"
+            priority
+          />
+
+          <article className="flex flex-col h-full gap-6">
+            <h5 className="font-poppins font-bold text-2xl text-green-primary">
+              Quem não cobra, não recebe!
+            </h5>
+
+            <h3 className="font-jakarta font-bold text-5xl text-blue-text">
+              Automatize as cobranças da sua empresa!
+            </h3>
+
+            <p className="font-jakarta font-medium text-lg text-gray-text">
+              Descubra como modernizar e simplificar a gestão de cobranças do
+              seu negócio com nossa Régua de Cobrança Inteligente, ferramenta
+              revolucionária projetada para otimizar o processo de contas a
+              receber.
+            </p>
+            <p className="font-jakarta font-medium text-lg text-gray-text">
+              Através desta solução integrada ao nosso sistema de cobrança, você
+              terá acesso a uma cadência de cobrança dinâmica, ágil e
+              personalizada ao perfil e comportamento de pagamento de cada
+              cliente, para atingi-los através de múltiplos canais, maximizando
+              pagamentos e minimizando a inadimplência.
+            </p>
+
+            <button className="w-60 h-12 px-7 py-2 rounded-xl font-poppins font-medium text-base bg-green-primary text-white hover:brightness-90 hover:border hover:border-green-secondary transition whitespace-nowrap flex items-center justify-center">
+              Conheça essa solução
+            </button>
+
+            <p className="font-jakarta font-regular text-2xl text-gray-text">
+              A <span className="font-extrabold text-green-primary">BSPAY</span>{" "}
+              oferece uma solução completa para seu negócio, cobre e recebe
+              pagamentos de forma ágil
+            </p>
+          </article>
+        </div>
+      </SectionContainer>
+
+      <SectionContainer
+        additionalSectionClass="h-auto pt-14"
+        additionalContainerClass="gap-14"
+      >
+        <h3 className="font-jakarta font-bold text-5xl text-blue-text text-center">
+          Por que trazer sua operação para BSPAY
+        </h3>
+
+        <div className="flex items-center justify-center w-full h-auto gap-6">
+          <div className="flex flex-col p-8 w-[25.25rem] h-[22.5rem] gap-8 rounded-[1.875rem] border-2 border-green-primary">
+            <ShieldCheck
+              className="w-14 h-auto text-green-primary"
+              weight="duotone"
             />
 
-            <article className="flex flex-col h-full gap-6">
-              <h5 className="font-poppins font-bold text-2xl text-green-primary">
-                Quem não cobra, não recebe!
+            <div className="flex flex-col gap-6 w-full">
+              <h5 className="font-jakarta font-bold text-4xl text-gray-black">
+                Segurança
               </h5>
 
-              <h3 className="font-jakarta font-bold text-5xl text-blue-text">
-                Automatize as cobranças da sua empresa!
-              </h3>
-
-              <p className="font-jakarta font-medium text-lg text-gray-text">
-                Descubra como modernizar e simplificar a gestão de cobranças do
-                seu negócio com nossa Régua de Cobrança Inteligente, ferramenta
-                revolucionária projetada para otimizar o processo de contas a
-                receber.
+              <p className="font-jakarta font-regular text-xl text-gray-text">
+                Atuamos seguindo as principais recomendações dos órgãos
+                reguladores do mercado financeiro.
               </p>
-              <p className="font-jakarta font-medium text-lg text-gray-text">
-                Através desta solução integrada ao nosso sistema de cobrança,
-                você terá acesso a uma cadência de cobrança dinâmica, ágil e
-                personalizada ao perfil e comportamento de pagamento de cada
-                cliente, para atingi-los através de múltiplos canais,
-                maximizando pagamentos e minimizando a inadimplência.
-              </p>
-
-              <button className="w-60 h-12 px-7 py-2 rounded-xl font-poppins font-medium text-base bg-green-primary text-white hover:brightness-90 hover:border hover:border-green-secondary transition whitespace-nowrap flex items-center justify-center">
-                Conheça essa solução
-              </button>
-
-              <p className="font-jakarta font-regular text-2xl text-gray-text">
-                A{" "}
-                <span className="font-extrabold text-green-primary">BSPAY</span>{" "}
-                oferece uma solução completa para seu negócio, cobre e recebe
-                pagamentos de forma ágil
-              </p>
-            </article>
+            </div>
           </div>
-        </div>
-      </section>
 
-      <section className="flex justify-center w-full h-auto pt-14 md:px-[1.375rem]">
-        <div className="flex flex-col w-full md:max-w-7xl h-full gap-14">
-          <h3 className="font-jakarta font-bold text-5xl text-blue-text text-center">
-            Por que trazer sua operação para BSPAY
-          </h3>
+          <div className="flex flex-col p-8 w-[25.25rem] h-[22.5rem] gap-8 rounded-[1.875rem] border-2 border-green-primary">
+            <ThumbsUp
+              className="w-14 h-auto text-green-primary"
+              weight="duotone"
+            />
 
-          <div className="flex items-center justify-center w-full h-auto gap-6">
-            <div className="flex flex-col p-8 w-[25.25rem] h-[22.5rem] gap-8 rounded-[1.875rem] border-2 border-green-primary">
-              <ShieldCheck
-                className="w-14 h-auto text-green-primary"
-                weight="duotone"
-              />
+            <div className="flex flex-col gap-6 w-full">
+              <h5 className="font-jakarta font-bold text-4xl text-gray-black">
+                Confiabilidade
+              </h5>
 
-              <div className="flex flex-col gap-6 w-full">
-                <h5 className="font-jakarta font-bold text-4xl text-gray-black">
-                  Segurança
-                </h5>
-
-                <p className="font-jakarta font-regular text-xl text-gray-text">
-                  Atuamos seguindo as principais recomendações dos órgãos
-                  reguladores do mercado financeiro.
-                </p>
-              </div>
+              <p className="font-jakarta font-regular text-xl text-gray-text">
+                Usamos verificação de duas etapas para proteger a sua conta.
+                Sendo assim, apenas você tem acesso ao seu dinheiro.
+              </p>
             </div>
+          </div>
 
-            <div className="flex flex-col p-8 w-[25.25rem] h-[22.5rem] gap-8 rounded-[1.875rem] border-2 border-green-primary">
-              <ThumbsUp
-                className="w-14 h-auto text-green-primary"
-                weight="duotone"
-              />
+          <div className="flex flex-col p-8 w-[25.25rem] h-[22.5rem] gap-8 rounded-[1.875rem] border-2 border-green-primary">
+            <Medal
+              className="w-14 h-auto text-green-primary"
+              weight="duotone"
+            />
 
-              <div className="flex flex-col gap-6 w-full">
-                <h5 className="font-jakarta font-bold text-4xl text-gray-black">
-                  Confiabilidade
-                </h5>
+            <div className="flex flex-col gap-6 w-full">
+              <h5 className="font-jakarta font-bold text-4xl text-gray-black">
+                Credibilidade
+              </h5>
 
-                <p className="font-jakarta font-regular text-xl text-gray-text">
-                  Usamos verificação de duas etapas para proteger a sua conta.
-                  Sendo assim, apenas você tem acesso ao seu dinheiro.
-                </p>
-              </div>
-            </div>
-
-            <div className="flex flex-col p-8 w-[25.25rem] h-[22.5rem] gap-8 rounded-[1.875rem] border-2 border-green-primary">
-              <Medal
-                className="w-14 h-auto text-green-primary"
-                weight="duotone"
-              />
-
-              <div className="flex flex-col gap-6 w-full">
-                <h5 className="font-jakarta font-bold text-4xl text-gray-black">
-                  Credibilidade
-                </h5>
-
-                <p className="font-jakarta font-regular text-xl text-gray-text">
-                  Somos licenciados pelo Banco Central do Brasil a operar como
-                  facilitadora de pagamento.
-                </p>
-              </div>
+              <p className="font-jakarta font-regular text-xl text-gray-text">
+                Somos licenciados pelo Banco Central do Brasil a operar como
+                facilitadora de pagamento.
+              </p>
             </div>
           </div>
         </div>
-      </section>
+      </SectionContainer>
 
       <SectionContainer additionalContainerClass="gap-14 pt-14">
         <div className="flex justify-between w-full">
@@ -359,27 +379,677 @@ export default function Home() {
           </div>
         </div>
         <div className="flex justify-between w-full h-auto">
+          <div className="flex flex-col h-auto w-96 gap-14 bg-gray-white rounded-[1.25rem] border-[.375rem] border-green-primary p-9">
+            <p className="relative font-franklin font-medium text-lg text-blue-text">
+              <Quotes
+                className="absolute top-[-.5rem] left-[-1.5rem] w-4 h-4 text-gray-border rotate-180"
+                weight="fill"
+              />
+              Vocês são a parceira ideal para nossos negócios online. O serviço
+              de vocês é essencial para garantir a segurança e a eficiência das
+              transações.
+            </p>
+
+            <div className="flex flex-col gap-4 w-full">
+              <div className="flex justify-between gap-[.375rem] max-w-24">
+                <Star className="w-5 h-5 text-green-primary" weight="fill" />
+                <Star className="w-5 h-5 text-green-primary" weight="fill" />
+                <Star className="w-5 h-5 text-green-primary" weight="fill" />
+                <Star className="w-5 h-5 text-green-primary" weight="fill" />
+                <Star className="w-5 h-5 text-green-primary" weight="fill" />
+              </div>
+              <div className="flex items-center gap-5 w-full">
+                <Image
+                  src={person1}
+                  alt="Pessoa"
+                  sizes="100vw"
+                  className="w-14 h-14 rounded-full"
+                  priority
+                />
+
+                <div className="flex flex-col gap-1">
+                  <h5 className="font-ibmPlex font-semibold text-xl text-blue-text">
+                    Maria Silva
+                  </h5>
+                  <span className="font-franklin font-medium text-base text-gray-border">
+                    Gerente de E-commerce
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="flex flex-col h-auto w-96 gap-14 bg-gray-white rounded-[1.25rem] border-[.375rem] border-green-primary p-9">
+            <p className="relative font-franklin font-medium text-lg text-blue-text">
+              <Quotes
+                className="absolute top-[-.5rem] left-[-1.5rem] w-4 h-4 text-gray-border rotate-180"
+                weight="fill"
+              />
+              Estamos muito satisfeitos com a qualidade do serviço. Vocês são
+              extremamente profissionais e eficientes!
+            </p>
+
+            <div className="flex flex-col gap-4 w-full">
+              <div className="flex justify-between gap-[.375rem] max-w-24">
+                <Star className="w-5 h-5 text-green-primary" weight="fill" />
+                <Star className="w-5 h-5 text-green-primary" weight="fill" />
+                <Star className="w-5 h-5 text-green-primary" weight="fill" />
+                <Star className="w-5 h-5 text-green-primary" weight="fill" />
+                <StarHalf
+                  className="w-5 h-5 text-green-primary"
+                  weight="fill"
+                />
+              </div>
+              <div className="flex items-center gap-5 w-full">
+                <Image
+                  src={person3}
+                  alt="Pessoa"
+                  sizes="100vw"
+                  className="w-14 h-14 rounded-full"
+                  priority
+                />
+
+                <div className="flex flex-col gap-1">
+                  <h5 className="font-ibmPlex font-semibold text-xl text-blue-text">
+                    João Oliveira
+                  </h5>
+                  <span className="font-franklin font-medium text-base text-gray-border">
+                    CEO
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="flex flex-col h-auto w-96 gap-14 bg-gray-white rounded-[1.25rem] border-[.375rem] border-green-primary p-9">
+            <p className="relative font-franklin font-medium text-lg text-blue-text">
+              <Quotes
+                className="absolute top-[-.5rem] left-[-1.5rem] w-4 h-4 text-gray-border rotate-180"
+                weight="fill"
+              />
+              Os devs gostaram bastante de documentação que vocês montaram, a
+              integração foi fácil e rápida! E suporte também tirou várias
+              dúvidas.
+            </p>
+
+            <div className="flex flex-col gap-4 w-full">
+              <div className="flex justify-between gap-[.375rem] max-w-24">
+                <Star className="w-5 h-5 text-green-primary" weight="fill" />
+                <Star className="w-5 h-5 text-green-primary" weight="fill" />
+                <Star className="w-5 h-5 text-green-primary" weight="fill" />
+                <Star className="w-5 h-5 text-green-primary" weight="fill" />
+                <StarHalf
+                  className="w-5 h-5 text-green-primary"
+                  weight="fill"
+                />
+              </div>
+              <div className="flex items-center gap-5 w-full">
+                <Image
+                  src={person2}
+                  alt="Pessoa"
+                  sizes="100vw"
+                  className="w-14 h-14 rounded-full"
+                  priority
+                />
+
+                <div className="flex flex-col gap-1">
+                  <h5 className="font-ibmPlex font-semibold text-xl text-blue-text">
+                    Pedro Santos
+                  </h5>
+                  <span className="font-franklin font-medium text-base text-gray-border">
+                    Diretor Financeiro
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </SectionContainer>
+
+      <SectionContainer
+        additionalSectionClass="w-full"
+        additionalContainerClass="items-center pt-14 gap-10"
+      >
+        <h3 className="font-jakarta font-bold text-5xl text-blue-text text-center max-w-[29.375rem]">
+          Por Que Escolher a BSPAY?
+        </h3>
+
+        <div className="flex justify-between w-full pt-16 bg-notebook-bg bg-contain bg-no-repeat bg-center">
+          <div className="flex flex-col gap-3 max-w-60">
+            <div className="flex flex-col gap-3 p-3">
+              <div className="flex items-center justify-center w-20 h-20 rounded-xl bg-green-primary">
+                <Users className="w-10 h-auto text-white" />
+              </div>
+
+              <h4 className="font-ibmPlex font-semibold text-2xl text-blue-text">
+                Experiência Comprovada
+              </h4>
+
+              <p className="font-franklin font-medium text-lg text-gray-border">
+                Confie em uma empresa com histórico de sucesso comprovado em
+                soluções de pagamento.
+              </p>
+            </div>
+
+            <div className="flex flex-col gap-3 p-3">
+              <div className="flex items-center justify-center w-20 h-20 rounded-xl bg-green-primary">
+                <PaintBrush className="w-10 h-auto text-white" />
+              </div>
+
+              <h4 className="font-ibmPlex font-semibold text-2xl text-blue-text">
+                Experiência Comprovada
+              </h4>
+
+              <p className="font-franklin font-medium text-lg text-gray-border">
+                Confie em uma empresa com histórico de sucesso comprovado em
+                soluções de pagamento.
+              </p>
+            </div>
+
+            <div className="flex flex-col gap-3 p-3">
+              <div className="flex items-center justify-center w-20 h-20 rounded-xl bg-green-primary">
+                <Headset className="w-10 h-auto text-white" />
+              </div>
+
+              <h4 className="font-ibmPlex font-semibold text-2xl text-blue-text">
+                Experiência Comprovada
+              </h4>
+
+              <p className="font-franklin font-medium text-lg text-gray-border">
+                Confie em uma empresa com histórico de sucesso comprovado em
+                soluções de pagamento.
+              </p>
+            </div>
+          </div>
+
+          <div className="flex flex-col gap-3 max-w-60">
+            <div className="flex flex-col gap-3 p-3">
+              <div className="flex items-center justify-center w-20 h-20 rounded-xl bg-green-primary">
+                <LockKey className="w-10 h-auto text-white" />
+              </div>
+
+              <h4 className="font-ibmPlex font-semibold text-2xl text-blue-text">
+                Experiência Comprovada
+              </h4>
+
+              <p className="font-franklin font-medium text-lg text-gray-border">
+                Confie em uma empresa com histórico de sucesso comprovado em
+                soluções de pagamento.
+              </p>
+            </div>
+
+            <div className="flex flex-col gap-3 p-3">
+              <div className="flex items-center justify-center w-20 h-20 rounded-xl bg-green-primary">
+                <Link className="w-10 h-auto text-white" />
+              </div>
+
+              <h4 className="font-ibmPlex font-semibold text-2xl text-blue-text">
+                Experiência Comprovada
+              </h4>
+
+              <p className="font-franklin font-medium text-lg text-gray-border">
+                Confie em uma empresa com histórico de sucesso comprovado em
+                soluções de pagamento.
+              </p>
+            </div>
+
+            <div className="flex flex-col gap-3 p-3">
+              <div className="flex items-center justify-center w-20 h-20 rounded-xl bg-green-primary">
+                <TipJar className="w-10 h-auto text-white" />
+              </div>
+
+              <h4 className="font-ibmPlex font-semibold text-2xl text-blue-text">
+                Experiência Comprovada
+              </h4>
+
+              <p className="font-franklin font-medium text-lg text-gray-border">
+                Confie em uma empresa com histórico de sucesso comprovado em
+                soluções de pagamento.
+              </p>
+            </div>
+          </div>
+        </div>
+      </SectionContainer>
+
+      <SectionContainer additionalContainerClass="bg-coins-bg bg-auto bg-no-repeat bg-left pt-14">
+        <div className="flex justify-center gap-14 w-full h-[115rem]">
+          <div className="flex flex-col items-center gap-14">
+            <div className="flex flex-col gap-8 w-[31.25rem] h-[38.75rem] p-10 rounded-[2.5rem] bg-gray-black">
+              <div className="flex justify-between w-full max-h-36">
+                <div className="flex flex-col gap-3 max-w-[20rem]">
+                  <h4 className="font-jakarta font-bold text-4xl text-white">
+                    Bspay Bank
+                  </h4>
+
+                  <p className="font-jakarta font-regular text-base text-white w-full">
+                    A única plataforma especializada para negócios digitais com
+                    Internet Banking integrado, tudo na palma da sua mão.
+                  </p>
+                </div>
+
+                <div className="flex justify-center w-[5.625rem] h-full">
+                  <Image
+                    src={coffer}
+                    alt="Imagem de moedas"
+                    sizes="100vw"
+                    className="w-[5.625rem] h-[5.625rem]"
+                    priority
+                  />
+                </div>
+              </div>
+
+              <div className="flex flex-col gap-7 w-full">
+                <div className="flex gap-2">
+                  <Image
+                    src={dot}
+                    alt="Circulo verde"
+                    sizes="100vw"
+                    className="w-6 h-6"
+                    priority
+                  />
+
+                  <p className="font-jakarta font-regular text-lg text-white max-w-[22.125rem]">
+                    Controle completo desde o checkout até as transações;
+                  </p>
+                </div>
+
+                <div className="flex gap-2">
+                  <Image
+                    src={dot}
+                    alt="Circulo verde"
+                    sizes="100vw"
+                    className="w-6 h-6"
+                    priority
+                  />
+
+                  <p className="font-jakarta font-regular text-lg text-white max-w-[22.125rem]">
+                    Controle completo desde o checkout até as transações;
+                  </p>
+                </div>
+
+                <div className="flex gap-2">
+                  <Image
+                    src={dot}
+                    alt="Circulo verde"
+                    sizes="100vw"
+                    className="w-6 h-6"
+                    priority
+                  />
+
+                  <p className="font-jakarta font-regular text-lg text-white max-w-[22.125rem]">
+                    Controle completo desde o checkout até as transações;
+                  </p>
+                </div>
+
+                <div className="flex gap-2">
+                  <Image
+                    src={dot}
+                    alt="Circulo verde"
+                    sizes="100vw"
+                    className="w-6 h-6"
+                    priority
+                  />
+
+                  <p className="font-jakarta font-regular text-lg text-white max-w-[22.125rem]">
+                    Controle completo desde o checkout até as transações;
+                  </p>
+                </div>
+
+                <button className="flex items-center justify-center w-36 h-10 rounded-[1.25rem] border-2 border-green-secondary bg-green-primary font-jakarta font-semibold text-base text-white">
+                  Veja mais
+                </button>
+              </div>
+            </div>
+
+            <div className="flex flex-col gap-8 w-[31.25rem] h-[38.75rem] p-10 rounded-[2.5rem] bg-gray-black">
+              <div className="flex justify-between w-full max-h-36">
+                <div className="flex flex-col gap-3 max-w-[20rem]">
+                  <h4 className="font-jakarta font-bold text-4xl text-white">
+                    Bspay Bank
+                  </h4>
+
+                  <p className="font-jakarta font-regular text-base text-white w-full">
+                    A única plataforma especializada para negócios digitais com
+                    Internet Banking integrado, tudo na palma da sua mão.
+                  </p>
+                </div>
+
+                <div className="flex justify-center w-[5.625rem] h-full">
+                  <Image
+                    src={shield}
+                    alt="Imagem de escudo"
+                    sizes="100vw"
+                    className="w-[5.625rem] h-[5.625rem]"
+                    priority
+                  />
+                </div>
+              </div>
+
+              <div className="flex flex-col gap-7 w-full">
+                <div className="flex gap-2">
+                  <Image
+                    src={dot}
+                    alt="Circulo verde"
+                    sizes="100vw"
+                    className="w-6 h-6"
+                    priority
+                  />
+
+                  <p className="font-jakarta font-regular text-lg text-white max-w-[22.125rem]">
+                    Controle completo desde o checkout até as transações;
+                  </p>
+                </div>
+
+                <div className="flex gap-2">
+                  <Image
+                    src={dot}
+                    alt="Circulo verde"
+                    sizes="100vw"
+                    className="w-6 h-6"
+                    priority
+                  />
+
+                  <p className="font-jakarta font-regular text-lg text-white max-w-[22.125rem]">
+                    Controle completo desde o checkout até as transações;
+                  </p>
+                </div>
+
+                <div className="flex gap-2">
+                  <Image
+                    src={dot}
+                    alt="Circulo verde"
+                    sizes="100vw"
+                    className="w-6 h-6"
+                    priority
+                  />
+
+                  <p className="font-jakarta font-regular text-lg text-white max-w-[22.125rem]">
+                    Controle completo desde o checkout até as transações;
+                  </p>
+                </div>
+
+                <div className="flex gap-2">
+                  <Image
+                    src={dot}
+                    alt="Circulo verde"
+                    sizes="100vw"
+                    className="w-6 h-6"
+                    priority
+                  />
+
+                  <p className="font-jakarta font-regular text-lg text-white max-w-[22.125rem]">
+                    Controle completo desde o checkout até as transações;
+                  </p>
+                </div>
+
+                <button className="flex items-center justify-center w-36 h-10 rounded-[1.25rem] border-2 border-green-secondary bg-green-primary font-jakarta font-semibold text-base text-white">
+                  Veja mais
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div className="flex flex-col items-center gap-14 pt-[19.125rem]">
+            <div className="flex flex-col gap-8 w-[31.25rem] h-[38.75rem] p-10 rounded-[2.5rem] bg-gray-black">
+              <div className="flex justify-between w-full max-h-36">
+                <div className="flex flex-col gap-3 max-w-[20rem]">
+                  <h4 className="font-jakarta font-bold text-4xl text-white">
+                    Bspay Bank
+                  </h4>
+
+                  <p className="font-jakarta font-regular text-base text-white w-full">
+                    A única plataforma especializada para negócios digitais com
+                    Internet Banking integrado, tudo na palma da sua mão.
+                  </p>
+                </div>
+
+                <div className="flex justify-center w-[5.625rem] h-full">
+                  <Image
+                    src={coffer}
+                    alt="Imagem de moedas"
+                    sizes="100vw"
+                    className="w-[5.625rem] h-[5.625rem]"
+                    priority
+                  />
+                </div>
+              </div>
+
+              <div className="flex flex-col gap-7 w-full">
+                <div className="flex gap-2">
+                  <Image
+                    src={dot}
+                    alt="Circulo verde"
+                    sizes="100vw"
+                    className="w-6 h-6"
+                    priority
+                  />
+
+                  <p className="font-jakarta font-regular text-lg text-white max-w-[22.125rem]">
+                    Controle completo desde o checkout até as transações;
+                  </p>
+                </div>
+
+                <div className="flex gap-2">
+                  <Image
+                    src={dot}
+                    alt="Circulo verde"
+                    sizes="100vw"
+                    className="w-6 h-6"
+                    priority
+                  />
+
+                  <p className="font-jakarta font-regular text-lg text-white max-w-[22.125rem]">
+                    Controle completo desde o checkout até as transações;
+                  </p>
+                </div>
+
+                <div className="flex gap-2">
+                  <Image
+                    src={dot}
+                    alt="Circulo verde"
+                    sizes="100vw"
+                    className="w-6 h-6"
+                    priority
+                  />
+
+                  <p className="font-jakarta font-regular text-lg text-white max-w-[22.125rem]">
+                    Controle completo desde o checkout até as transações;
+                  </p>
+                </div>
+
+                <div className="flex gap-2">
+                  <Image
+                    src={dot}
+                    alt="Circulo verde"
+                    sizes="100vw"
+                    className="w-6 h-6"
+                    priority
+                  />
+
+                  <p className="font-jakarta font-regular text-lg text-white max-w-[22.125rem]">
+                    Controle completo desde o checkout até as transações;
+                  </p>
+                </div>
+
+                <button className="flex items-center justify-center w-36 h-10 rounded-[1.25rem] border-2 border-green-secondary bg-green-primary font-jakarta font-semibold text-base text-white">
+                  Veja mais
+                </button>
+              </div>
+            </div>
+
+            <div className="flex flex-col gap-8 w-[31.25rem] h-[38.75rem] p-10 rounded-[2.5rem] bg-gray-black">
+              <div className="flex justify-between w-full max-h-36">
+                <div className="flex flex-col gap-3 max-w-[20rem]">
+                  <h4 className="font-jakarta font-bold text-4xl text-white">
+                    Bspay Bank
+                  </h4>
+
+                  <p className="font-jakarta font-regular text-base text-white w-full">
+                    A única plataforma especializada para negócios digitais com
+                    Internet Banking integrado, tudo na palma da sua mão.
+                  </p>
+                </div>
+
+                <div className="flex justify-center w-[5.625rem] h-full">
+                  <Image
+                    src={shield}
+                    alt="Imagem de escudo"
+                    sizes="100vw"
+                    className="w-[5.625rem] h-[5.625rem]"
+                    priority
+                  />
+                </div>
+              </div>
+
+              <div className="flex flex-col gap-7 w-full">
+                <div className="flex gap-2">
+                  <Image
+                    src={dot}
+                    alt="Circulo verde"
+                    sizes="100vw"
+                    className="w-6 h-6"
+                    priority
+                  />
+
+                  <p className="font-jakarta font-regular text-lg text-white max-w-[22.125rem]">
+                    Controle completo desde o checkout até as transações;
+                  </p>
+                </div>
+
+                <div className="flex gap-2">
+                  <Image
+                    src={dot}
+                    alt="Circulo verde"
+                    sizes="100vw"
+                    className="w-6 h-6"
+                    priority
+                  />
+
+                  <p className="font-jakarta font-regular text-lg text-white max-w-[22.125rem]">
+                    Controle completo desde o checkout até as transações;
+                  </p>
+                </div>
+
+                <div className="flex gap-2">
+                  <Image
+                    src={dot}
+                    alt="Circulo verde"
+                    sizes="100vw"
+                    className="w-6 h-6"
+                    priority
+                  />
+
+                  <p className="font-jakarta font-regular text-lg text-white max-w-[22.125rem]">
+                    Controle completo desde o checkout até as transações;
+                  </p>
+                </div>
+
+                <div className="flex gap-2">
+                  <Image
+                    src={dot}
+                    alt="Circulo verde"
+                    sizes="100vw"
+                    className="w-6 h-6"
+                    priority
+                  />
+
+                  <p className="font-jakarta font-regular text-lg text-white max-w-[22.125rem]">
+                    Controle completo desde o checkout até as transações;
+                  </p>
+                </div>
+
+                <button className="flex items-center justify-center w-36 h-10 rounded-[1.25rem] border-2 border-green-secondary bg-green-primary font-jakarta font-semibold text-base text-white">
+                  Veja mais
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </SectionContainer>
+
+      <SectionContainer additionalContainerClass="items-center py-14">
+        <div className="flex flex-col items-center relative gap-14 w-[52rem]">
           <Image
-            src={clienteDepoiment1}
-            alt="Depoimento 1"
+            src={targetArrow}
+            alt="Divisão"
             sizes="100vw"
-            className="w-96 h-auto"
+            className="w-[14.375rem] h-auto absolute top-[-5rem] left-[-12rem]"
             priority
           />
-          <Image
-            src={clienteDepoiment2}
-            alt="Depoimento 1"
-            sizes="100vw"
-            className="w-96 h-auto"
-            priority
-          />
-          <Image
-            src={clienteDepoiment3}
-            alt="Depoimento 1"
-            sizes="100vw"
-            className="w-96 h-auto"
-            priority
-          />
+
+          <h4 className="font-jakarta font-bold text-5xl text-blue-text">
+            Dúvidas frequentes
+          </h4>
+
+          <div className="flex flex-col w-full px-8">
+            <Accordion
+              type="single"
+              collapsible
+              className="border-b-1 border-gray-border"
+            >
+              <AccordionItem value="pergunta-1">
+                <AccordionTrigger className="font-jakarta font-medium text-2xl text-blue-text pb-2 hover:no-underline">
+                  Lorem Ipsum dolor?
+                </AccordionTrigger>
+                <AccordionContent className="font-jakarta font-regular text-base text-gray-text max-w-[45rem] pb-8">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
+                  ultricies quam quis ex rutrum, et pellentesque ex fermentum.
+                  Fusce id eros velit.
+                </AccordionContent>
+              </AccordionItem>
+            </Accordion>
+
+            <Accordion
+              type="single"
+              collapsible
+              className="border-b-1 border-gray-border"
+            >
+              <AccordionItem value="pergunta-1">
+                <AccordionTrigger className="font-jakarta font-medium text-2xl text-blue-text pb-2 hover:no-underline">
+                  Lorem Ipsum dolor?
+                </AccordionTrigger>
+                <AccordionContent className="font-jakarta font-regular text-base text-gray-text max-w-[45rem] pb-8">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
+                  ultricies quam quis ex rutrum, et pellentesque ex fermentum.
+                  Fusce id eros velit.
+                </AccordionContent>
+              </AccordionItem>
+            </Accordion>
+
+            <Accordion
+              type="single"
+              collapsible
+              className="border-b-1 border-gray-border"
+            >
+              <AccordionItem value="pergunta-1">
+                <AccordionTrigger className="font-jakarta font-medium text-2xl text-blue-text pb-2 hover:no-underline">
+                  Lorem Ipsum dolor?
+                </AccordionTrigger>
+                <AccordionContent className="font-jakarta font-regular text-base text-gray-text max-w-[45rem] pb-8">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
+                  ultricies quam quis ex rutrum, et pellentesque ex fermentum.
+                  Fusce id eros velit.
+                </AccordionContent>
+              </AccordionItem>
+            </Accordion>
+
+            <Accordion
+              type="single"
+              collapsible
+              className="border-b-1 border-gray-border"
+            >
+              <AccordionItem value="pergunta-1">
+                <AccordionTrigger className="font-jakarta font-medium text-2xl text-blue-text pb-2 hover:no-underline">
+                  Lorem Ipsum dolor?
+                </AccordionTrigger>
+                <AccordionContent className="font-jakarta font-regular text-base text-gray-text max-w-[45rem] pb-8">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
+                  ultricies quam quis ex rutrum, et pellentesque ex fermentum.
+                  Fusce id eros velit.
+                </AccordionContent>
+              </AccordionItem>
+            </Accordion>
+          </div>
         </div>
       </SectionContainer>
     </>
