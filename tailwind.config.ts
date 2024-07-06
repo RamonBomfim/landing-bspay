@@ -32,6 +32,7 @@ const config: Config = {
           "linear-gradient(180deg, #F4F4F7 0%, #00CC7C66 100%)",
         "notebook-bg": "url('~/src/assets/notebook-bg.svg')",
         "coins-bg": "url('~/src/assets/coins-bg.svg')",
+        "why-choose-bg": "url('~/src/assets/why-choose-bg.svg')",
       },
       fontFamily: {
         jakarta: ["var(--font-jakarta)"],
