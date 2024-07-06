@@ -100,7 +100,7 @@ export function ClientsFeedbacks() {
           </div>
         </div>
       </div>
-      <div className="flex flex-col md:flex-row md:justify-between gap-7 w-full h-auto">
+      <div className="flex flex-col md:flex-row items-center sm:items-start md:justify-between gap-7 w-full h-auto">
         {feedbacks.map((feedback) => (
           <FeedbackCard
             key={feedback.name}
