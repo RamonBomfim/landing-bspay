@@ -13,7 +13,7 @@ export function FeedbackCard({
   const stars = getStars(rating, name);
 
   return (
-    <div className="flex flex-col h-auto w-80 sm:w-96 gap-3 sm:gap-14 bg-gray-white rounded-[1.25rem] border-[.375rem] border-green-primary p-9">
+    <div className="flex flex-col h-auto w-full gap-3 sm:gap-14 bg-gray-white rounded-[1.25rem] border-[.375rem] border-green-primary p-9">
       <p className="relative font-franklin font-medium text-base sm:text-lg text-blue-text">
         <Quotes
           className="absolute top-[-.5rem] left-[-1.5rem] w-4 h-4 text-gray-border rotate-180"

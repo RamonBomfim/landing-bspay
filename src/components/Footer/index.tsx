@@ -13,22 +13,47 @@ export function Footer() {
   return (
     <SectionContainer
       additionalSectionClass="bg-gray-black"
-      additionalContainerClass="py-14"
+      additionalContainerClass="py-14 px-[1.375rem] md:px-0"
     >
-      <div className="flex items-center justify-between w-full">
-        <div className="flex flex-col gap-16">
+      <div className="flex md:items-center justify-between w-full">
+        <div className="flex flex-col gap-4 md:gap-16">
           <Logo />
 
-          <p className="font-jakarta font-bold text-2xl text-gray-white">
+          <p className="font-jakarta font-bold text-xs md:text-2xl text-gray-white">
             A Gateway mais completa do mercado
           </p>
 
-          <span className="font-jakarta font-regular text-base text-gray-text">
+          <span className="font-jakarta font-regular text-[.625rem] md:text-base text-gray-text">
             @{new Date().getFullYear()} BS Pay LTD. Todos direitos reservados.
           </span>
+
+          <div className="flex md:hidden flex-col gap-4">
+            <h5 className="font-jakarta font-bold text-base text-green-primary">
+              Links
+            </h5>
+
+            <a
+              href="#"
+              className="font-jakarta font-medium text-xs text-gray-white"
+            >
+              Navegador
+            </a>
+            <a
+              href="#"
+              className="font-jakarta font-medium text-xs text-gray-white"
+            >
+              Desenvolvedores
+            </a>
+            <a
+              href="#"
+              className="font-jakarta font-medium text-xs text-gray-white"
+            >
+              Atendimento
+            </a>
+          </div>
         </div>
 
-        <div className="flex gap-5">
+        <div className="hidden md:flex gap-5">
           <div className="flex flex-col gap-8">
             <span className="font-jakarta font-bold text-lg text-green-primary">
               Navegação
@@ -111,7 +136,7 @@ export function Footer() {
         </div>
 
         <div className="flex flex-col gap-5">
-          <h5 className="font-jakarta font-semibold text-xl text-gray-white">
+          <h5 className="font-jakarta font-semibold text-base md:text-xl text-gray-white">
             Redes Sociais
           </h5>
 

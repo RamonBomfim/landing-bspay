@@ -15,7 +15,7 @@ export function WhyChoose() {
   return (
     <SectionContainer
       additionalSectionClass="w-full"
-      additionalContainerClass="items-center pt-7 md:pt-14 gap-5 md:gap-10 px-[1.375rem] md:px-0"
+      additionalContainerClass="items-center py-7 md:pt-14 gap-5 md:gap-10 px-[1.375rem] md:px-0"
     >
       <h3 className="font-jakarta font-bold text-3xl md:text-5xl text-blue-text text-center max-w-[29.375rem]">
         Por Que Escolher a BSPAY?
