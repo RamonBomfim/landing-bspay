@@ -53,17 +53,29 @@ export function ClientsFeedbacks() {
         <div className="flex flex-col gap-3 w-full md:max-w-[20rem]">
           <div className="flex gap-4">
             <div className="flex md:flex-col items-end md:items-start gap-3">
-              <h5 className="font-ibmPlex font-semibold text-2xl text-gray-white">
+              <h5 className="font-ibmPlex font-semibold text-base sm:text-2xl text-gray-white">
                 Excelente
               </h5>
 
-              <div className="flex md:hidden justify-between pt-1 gap-4">
-                <Star className="w-6 h-6 text-green-primary" weight="fill" />
-                <Star className="w-6 h-6 text-green-primary" weight="fill" />
-                <Star className="w-6 h-6 text-green-primary" weight="fill" />
-                <Star className="w-6 h-6 text-green-primary" weight="fill" />
+              <div className="flex md:hidden justify-between items-center h-full sm:pt-1">
+                <Star
+                  className="w-4 sm:w-6 h-4 sm:h-6 text-green-primary"
+                  weight="fill"
+                />
+                <Star
+                  className="w-4 sm:w-6 h-4 sm:h-6 text-green-primary"
+                  weight="fill"
+                />
+                <Star
+                  className="w-4 sm:w-6 h-4 sm:h-6 text-green-primary"
+                  weight="fill"
+                />
+                <Star
+                  className="w-4 sm:w-6 h-4 sm:h-6 text-green-primary"
+                  weight="fill"
+                />
                 <StarHalf
-                  className="w-6 h-6 text-green-primary"
+                  className="w-4 sm:w-6 h-4 sm:h-6 text-green-primary"
                   weight="fill"
                 />
               </div>

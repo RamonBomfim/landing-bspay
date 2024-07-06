@@ -13,8 +13,8 @@ export function FeedbackCard({
   const stars = getStars(rating, name);
 
   return (
-    <div className="flex flex-col h-96 md:h-auto w-96 gap-14 bg-gray-white rounded-[1.25rem] border-[.375rem] border-green-primary p-9">
-      <p className="relative font-franklin font-medium text-lg text-blue-text">
+    <div className="flex flex-col h-auto w-80 sm:w-96 gap-3 sm:gap-14 bg-gray-white rounded-[1.25rem] border-[.375rem] border-green-primary p-9">
+      <p className="relative font-franklin font-medium text-base sm:text-lg text-blue-text">
         <Quotes
           className="absolute top-[-.5rem] left-[-1.5rem] w-4 h-4 text-gray-border rotate-180"
           weight="fill"
@@ -22,7 +22,7 @@ export function FeedbackCard({
         {feedback}
       </p>
 
-      <div className="flex flex-col gap-4 w-full">
+      <div className="flex flex-col gap-2 sm:gap-4 w-full">
         <div className="flex justify-between gap-[.375rem] max-w-24">
           {stars.map((star) => star)}
         </div>
@@ -36,7 +36,7 @@ export function FeedbackCard({
           />
 
           <div className="flex flex-col gap-1">
-            <h5 className="font-ibmPlex font-semibold text-xl text-blue-text">
+            <h5 className="font-ibmPlex font-semibold text-lg sm:text-xl text-blue-text">
               {name}
             </h5>
             <span className="font-franklin font-medium text-base text-gray-border">
