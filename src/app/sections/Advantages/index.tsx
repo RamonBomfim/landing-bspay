@@ -119,17 +119,17 @@ const advantagesRight: AdvantagesSection[] = [
 export function Advantages() {
   return (
     <SectionContainer
-      additionalSectionClass="pb-14 h-[156rem] md:h-auto md:pb-0"
-      additionalContainerClass="bg-coins-bg bg-contain md:bg-auto md:bg-no-repeat bg-left pt-14 px-[1.375rem] md:px-0"
+      additionalSectionClass="pb-14 h-[156rem] lg:h-auto lg:pb-0"
+      additionalContainerClass="bg-coins-bg bg-contain lg:bg-auto lg:bg-no-repeat bg-left pt-14 px-[1.375rem] lg:px-0"
     >
-      <div className="flex flex-col md:flex-row md:justify-center gap-14 w-full h-[115rem]">
+      <div className="flex flex-col lg:flex-row lg:justify-center gap-14 w-full h-[115rem]">
         <div className="flex flex-col items-center gap-14">
           {advantagesLeft.map((advantage) => (
             <AdvantageCard key={advantage.id} {...advantage} />
           ))}
         </div>
 
-        <div className="flex flex-col items-center gap-14 md:pt-[19.125rem]">
+        <div className="flex flex-col items-center gap-14 lg:pt-[19.125rem]">
           {advantagesRight.map((advantage) => (
             <AdvantageCard key={advantage.id} {...advantage} />
           ))}

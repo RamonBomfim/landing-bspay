@@ -9,19 +9,19 @@ export function AdvantageCard({
   advantages,
 }: AdvantageCardProps) {
   return (
-    <div className="flex flex-col gap-7 md:gap-8 w-full md:w-[31.25rem] h-auto sm:h-[36.5rem] md:h-[38.75rem] py-7 px-5 md:p-10 rounded-[2.5rem] bg-gray-black">
+    <div className="flex flex-col gap-7 lg:gap-8 w-full lg:w-[31.25rem] h-auto sm:h-[36.5rem] lg:h-[38.75rem] py-7 px-5 lg:p-10 rounded-[2.5rem] bg-gray-black">
       <div className="flex justify-between w-full max-h-36">
-        <div className="flex flex-col gap-2 md:gap-3 max-w-[15.125rem] md:max-w-[20rem]">
-          <h4 className="font-jakarta font-bold text-3xl md:text-4xl text-white">
+        <div className="flex flex-col gap-2 lg:gap-3 max-w-[15.125rem] lg:max-w-[20rem]">
+          <h4 className="font-jakarta font-bold text-3xl lg:text-4xl text-white">
             {title}
           </h4>
 
-          <p className="font-jakarta font-regular text-sm md:text-base text-white w-full">
+          <p className="font-jakarta font-regular text-sm lg:text-base text-white w-full">
             {description}
           </p>
         </div>
 
-        <div className="flex justify-center md:w-[5.625rem] h-full">
+        <div className="flex justify-center lg:w-[5.625rem] h-full">
           <Image
             src={image}
             alt="Imagem de moedas"
@@ -43,7 +43,7 @@ export function AdvantageCard({
               priority
             />
 
-            <p className="font-jakarta font-regular text-base md:text-lg text-white w-full md:max-w-[22.125rem]">
+            <p className="font-jakarta font-regular text-base lg:text-lg text-white w-full lg:max-w-[22.125rem]">
               {advantage}
             </p>
           </div>

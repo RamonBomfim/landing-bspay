@@ -28,13 +28,13 @@ export function ReasonsForUse() {
   return (
     <SectionContainer
       additionalSectionClass="h-auto pt-14"
-      additionalContainerClass="gap-7 md:gap-14 px-[1.375rem] md:px-0"
+      additionalContainerClass="gap-7 lg:gap-14 px-[1.375rem] lg:px-0"
     >
-      <h3 className="font-jakarta font-bold text-3xl md:text-5xl text-blue-text text-center">
+      <h3 className="font-jakarta font-bold text-3xl lg:text-5xl text-blue-text text-center">
         Por que trazer sua operação para BSPAY
       </h3>
 
-      <div className="flex flex-col md:flex-row items-center justify-center w-full h-auto gap-5 md:gap-6">
+      <div className="flex flex-col lg:flex-row items-center justify-center w-full h-auto gap-5 lg:gap-6">
         {reasonsForUse.map((reason) => (
           <ReasonCard
             key={reason.title}

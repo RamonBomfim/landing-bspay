@@ -15,9 +15,9 @@ export function WhyChoose() {
   return (
     <SectionContainer
       additionalSectionClass="w-full"
-      additionalContainerClass="items-center py-7 md:pt-14 gap-5 md:gap-10 px-[1.375rem] md:px-0"
+      additionalContainerClass="items-center py-7 lg:pt-14 gap-5 lg:gap-10 px-[1.375rem] lg:px-0"
     >
-      <h3 className="font-jakarta font-bold text-3xl md:text-5xl text-blue-text text-center max-w-[29.375rem]">
+      <h3 className="font-jakarta font-bold text-3xl lg:text-5xl text-blue-text text-center max-w-[29.375rem]">
         Por Que Escolher a BSPAY?
       </h3>
 
@@ -25,12 +25,12 @@ export function WhyChoose() {
         src={notebookBg}
         alt="Notebook com imagem de fundo"
         sizes="100vw"
-        className="w-full h-auto md:hidden"
+        className="w-full h-auto lg:hidden"
         priority
       />
 
-      <div className="flex flex-col md:flex-row md:justify-between gap-3 md:gap-0 w-full pt-0 md:pt-16 bg-why-choose-bg md:bg-notebook-bg bg-contain bg-no-repeat bg-center">
-        <div className="flex flex-col gap-3 w-full md:max-w-60">
+      <div className="flex flex-col lg:flex-row lg:justify-between gap-3 lg:gap-0 w-full pt-0 lg:pt-16 bg-why-choose-bg lg:bg-notebook-bg bg-contain bg-no-repeat bg-center">
+        <div className="flex flex-col gap-3 w-full lg:max-w-60">
           <WhyCard
             icon={Users}
             title="Experiência Comprovada"
@@ -49,7 +49,7 @@ export function WhyChoose() {
           />
         </div>
 
-        <div className="flex flex-col gap-3 w-full md:max-w-60">
+        <div className="flex flex-col gap-3 w-full lg:max-w-60">
           <WhyCard
             icon={LockKey}
             title="Experiência Comprovada"

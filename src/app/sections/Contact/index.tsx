@@ -30,11 +30,11 @@ export function Contact({ form, onSubmit }: ContactProps) {
   return (
     <SectionContainer
       additionalSectionClass="pt-[8.75rem] pb-14"
-      additionalContainerClass="px-[1.375rem] md:px-0"
+      additionalContainerClass="px-[1.375rem] lg:px-0"
     >
-      <div className="flex flex-col md:flex-row justify-between w-full h-full">
-        <article className="flex flex-col gap-7 pb-7 w-full md:w-[29.375rem]">
-          <h4 className="font-jakarta font-bold text-3xl md:text-5xl text-gray-black text-center md:text-left">
+      <div className="flex flex-col lg:flex-row justify-between w-full h-full">
+        <article className="flex flex-col gap-7 pb-7 w-full lg:w-[29.375rem]">
+          <h4 className="font-jakarta font-bold text-3xl lg:text-5xl text-gray-black text-center lg:text-left">
             Agende uma demonstração agora mesmo!
           </h4>
 
@@ -81,12 +81,12 @@ export function Contact({ form, onSubmit }: ContactProps) {
         </article>
 
         <Divider type="vertical" optionalClass="hidden" />
-        <Divider type="horizontal" optionalClass="md:hidden" />
+        <Divider type="horizontal" optionalClass="lg:hidden" />
 
         <Form {...form}>
           <form
             onSubmit={form.handleSubmit(onSubmit)}
-            className="flex flex-col gap-7 pt-7 md:pt-10 w-full md:w-[29.375rem]"
+            className="flex flex-col gap-7 pt-7 lg:pt-10 w-full lg:w-[29.375rem]"
           >
             <FormField
               control={form.control}
