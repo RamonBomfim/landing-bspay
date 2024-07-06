@@ -28,7 +28,7 @@ const feedbacks: FeedbackCardProps[] = [
     rating: 4.5,
     feedback:
       "Os devs gostaram bastante de documentação que vocês montaram, a integração foi fácil e rápida! E suporte também tirou várias dúvidas.",
-    description: "Diretor FinanceiroDiretor Financeiro",
+    description: "Diretor Financeiro",
     image: person2,
   },
 ];
